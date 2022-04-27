@@ -1,5 +1,9 @@
+#####################
+# terraform and provider config
+#####################
+
 terraform {
-  required_version = ">= 0.12.13"
+  required_version = ">= 1.1.9"
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -27,6 +31,10 @@ provider "azapi" {
   subscription_id = var.subscription_id
   tenant_id       = var.tenant_id
 }
+
+#####################
+# Resources
+#####################
 
 resource "azurerm_resource_group" "resource-group" {
   name     = "resource-group"
